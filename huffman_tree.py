@@ -1,18 +1,16 @@
 class HuffmanTree:
-    root = []
 
     def __init__(self, weight, char=None, left=None, right=None):
         self.wt = weight
         self.char = char
         self.left = left
         self.right = right
-        self.root = None
     
     def __str__(self):
         return f"\"symbol\" : {self.char}, \"frequency\" : {self.wt}"
     
     def weight(self):
-        return self.wt
+        return int(self.wt)
 
     def symbol(self):
         return self.char
