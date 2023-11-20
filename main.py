@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 
 import sys
-import heapq
 import click
-import json
 
-from huffman_tree import HuffmanTree
 from huffman_codec import HuffmanCodec
 
 def read_file(filename):
@@ -21,7 +18,7 @@ def read_file(filename):
 def main(output, filename):
 
     content = read_file(filename)
-    hf_r = HuffmanCodec()
+    #hf_r = HuffmanCodec()
     #hf_r.encode(content, output)
 
     hf_w = HuffmanCodec()

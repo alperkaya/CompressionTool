@@ -7,7 +7,7 @@ class HuffmanTree:
         self.right = right
     
     def __str__(self):
-        return f"\"symbol\" : {self.char}, \"frequency\" : {self.wt}"
+        return f"\"symbol\" : {self.char}, \"frequency\" : {self.wt}, | \"leaf : {self.is_leaf()}"
     
     def weight(self):
         return int(self.wt)
@@ -21,8 +21,8 @@ class HuffmanTree:
     def __lt__(self, other):
         return self.wt < other.wt
     
-    def print_all_nodes(self):
-        print(self.char, self.wt, self.is_leaf())
+    def print_tree(self):
+        print(str(self))
 
         if self.left != None:
             self.left.print_all_nodes()
